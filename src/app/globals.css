@@ -1,0 +1,166 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Dark styles only apply when a `.dark` class is present (site is light-themed) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Brand palette — taken from the home hero:
+ *   cream  #FDFBF7 · sand #F6F1EA · line #E8E1D5
+ *   terracotta #D56236 (hover #C2542B)
+ *   espresso text #4A453E · muted #7A7369 · label #8C7A6B
+ *
+ * Legacy colour scales (emerald, rose, pink, blue, slate, stone, gray) used
+ * across older pages are remapped onto this palette so every page stays on-brand.
+ */
+@theme {
+  --font-poppins: 'Poppins', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+
+  /* Semantic tokens */
+  --color-background: #FDFBF7;
+  --color-foreground: #4A453E;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #3A342D;
+  --color-primary: #D56236;
+  --color-primary-hover: #C2542B;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #F6F1EA;
+  --color-secondary-foreground: #5C554B;
+  --color-muted: #F3EFE9;
+  --color-muted-foreground: #7A7369;
+  --color-accent: #F9ECE5;
+  --color-accent-foreground: #B24B25;
+  --color-border: #E8E1D5;
+  --color-input: #E8E1D5;
+  --color-ring: #D56236;
+  --color-espresso: #2E2A25;
+  --color-cream: #FDFBF7;
+  --color-sand: #F6F1EA;
+  --color-gold: #C9A46A;
+
+  /* Terracotta scale (replaces emerald / rose / pink / blue / red) */
+  --color-emerald-50: #FDF6F2;
+  --color-emerald-100: #FAE9E0;
+  --color-emerald-200: #F3CFBE;
+  --color-emerald-300: #EAB094;
+  --color-emerald-400: #E08A66;
+  --color-emerald-500: #D9714A;
+  --color-emerald-600: #D56236;
+  --color-emerald-700: #C2542B;
+  --color-emerald-800: #A44522;
+  --color-emerald-900: #7A341B;
+  --color-emerald-950: #3D1A0D;
+
+  --color-rose-50: #FDF6F2;
+  --color-rose-100: #FAE9E0;
+  --color-rose-200: #F3CFBE;
+  --color-rose-300: #EAB094;
+  --color-rose-400: #E08A66;
+  --color-rose-500: #D9714A;
+  --color-rose-600: #D56236;
+  --color-rose-700: #C2542B;
+  --color-rose-800: #6B4A3A;
+  --color-rose-900: #4A453E;
+  --color-rose-950: #2E2A25;
+
+  --color-pink-50: #FDF6F2;
+  --color-pink-100: #FAE9E0;
+  --color-pink-200: #F3CFBE;
+  --color-pink-300: #EAB094;
+  --color-pink-400: #E08A66;
+  --color-pink-500: #D9714A;
+  --color-pink-600: #D56236;
+  --color-pink-700: #C2542B;
+
+  --color-blue-200: #F3CFBE;
+  --color-blue-400: #E08A66;
+  --color-blue-500: #D9714A;
+  --color-blue-600: #D56236;
+  --color-blue-700: #C2542B;
+
+  /* Warm neutral scale (replaces stone / slate / gray) */
+  --color-stone-50: #FDFBF7;
+  --color-stone-100: #F6F1EA;
+  --color-stone-200: #E8E1D5;
+  --color-stone-300: #D6CCBD;
+  --color-stone-400: #A99C8B;
+  --color-stone-500: #8C7A6B;
+  --color-stone-600: #6B5F53;
+  --color-stone-700: #4F463E;
+  --color-stone-800: #3A332D;
+  --color-stone-900: #2B2621;
+  --color-stone-950: #1F1B17;
+
+  --color-slate-300: #D6CCBD;
+  --color-slate-700: #4F463E;
+  --color-gray-100: #F6F1EA;
+  --color-gray-200: #E8E1D5;
+  --color-gray-300: #D6CCBD;
+
+  /* Stars / highlights */
+  --color-yellow-200: #EBD8B5;
+  --color-yellow-300: #DDBF8A;
+  --color-yellow-400: #C9A46A;
+  --color-amber-500: #C9A46A;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-poppins);
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-playfair);
+    color: var(--color-foreground);
+  }
+}
+
+/* Section eyebrow label, same as the hero pill */
+@layer components {
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    padding: 0.375rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #8C7A6B;
+    background: rgb(255 255 255 / 0.6);
+  }
+}
+
+/* Animations */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
