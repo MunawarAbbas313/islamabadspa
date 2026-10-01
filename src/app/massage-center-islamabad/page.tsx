@@ -48,7 +48,7 @@ export default function MassageCenterIslamabadPage() {
     description:
       "Top certified massage center in Islamabad offering therapeutic full body, deep tissue, and Thai massage.",
     telephone: "+923183526306",
-    url: "https://belviespa.com/massage-center-islamabad",
+    url: "https://www.islamabadmassagecenter.com/massage-center-islamabad",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Maqbool Market, F-7/4, Islamabad",

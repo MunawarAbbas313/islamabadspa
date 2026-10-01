@@ -4,7 +4,7 @@
 export const SITE = {
   name: "Belvie Spa and Massage Center",
   shortName: "Belvie Spa",
-  url: "https://belviespa.com",
+  url: "https://www.islamabadmassagecenter.com",
   phone: "+923183526306",
   phoneDisplay: "0318 3526306",
   phoneIntl: "+92 318 3526306",

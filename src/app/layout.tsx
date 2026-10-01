@@ -23,7 +23,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://belviespa.com"),
+  metadataBase: new URL("https://www.islamabadmassagecenter.com"),
   title: {
     default: "Best Massage Center in Islamabad | Belvie Spa F-7",
     template: "%s | Belvie Spa Islamabad",
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_PK",
-    url: "https://belviespa.com",
+    url: "https://www.islamabadmassagecenter.com",
     title: "Best Massage Center in Islamabad | Belvie Spa F-7",
     description:
       "Top spa and massage center in Maqbool Market, F-7/4, Islamabad. Certified therapists, 100% private suites, full body, deep tissue and Thai massage.",
@@ -118,9 +118,9 @@ const localBusinessSchema = {
   "@type": "DaySpa",
   "@id": `${SITE.url}/#spa`,
   name: "Belvie Spa and Massage Center",
-  url: "https://belviespa.com",
-  logo: "https://belviespa.com/icon.png",
-  image: "https://belviespa.com/icon.png",
+  url: "https://www.islamabadmassagecenter.com",
+  logo: "https://www.islamabadmassagecenter.com/icon.png",
+  image: "https://www.islamabadmassagecenter.com/icon.png",
   description:
     "Best massage center in Islamabad and top spa in F-7, offering full body, Swedish, Thai, deep tissue, hot stone and couples massage in Maqbool Market, F-7/4.",
   telephone: "+923183526306",

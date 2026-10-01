@@ -46,7 +46,7 @@ export async function generateMetadata({
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://belviespa.com/blog/${post.slug}`,
+      url: `https://www.islamabadmassagecenter.com/blog/${post.slug}`,
       type: "article",
       publishedTime: toISO(post.date),
     },
@@ -93,24 +93,24 @@ export default async function BlogPostPage({
     description: post.excerpt,
     datePublished: toISO(post.date),
     dateModified: toISO(post.date),
-    image: "https://belviespa.com/icon.png",
+    image: "https://www.islamabadmassagecenter.com/icon.png",
     keywords: post.keywords.join(", "),
     author: {
       "@type": "Organization",
       name: "Belvie Spa and Massage Center",
-      url: "https://belviespa.com",
+      url: "https://www.islamabadmassagecenter.com",
     },
     publisher: {
       "@type": "Organization",
       name: "Belvie Spa and Massage Center",
       logo: {
         "@type": "ImageObject",
-        url: "https://belviespa.com/icon.png",
+        url: "https://www.islamabadmassagecenter.com/icon.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://belviespa.com/blog/${post.slug}`,
+      "@id": `https://www.islamabadmassagecenter.com/blog/${post.slug}`,
     },
   };
 
@@ -122,19 +122,19 @@ export default async function BlogPostPage({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://belviespa.com",
+        item: "https://www.islamabadmassagecenter.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blog",
-        item: "https://belviespa.com/blog",
+        item: "https://www.islamabadmassagecenter.com/blog",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: post.title,
-        item: `https://belviespa.com/blog/${post.slug}`,
+        item: `https://www.islamabadmassagecenter.com/blog/${post.slug}`,
       },
     ],
   };

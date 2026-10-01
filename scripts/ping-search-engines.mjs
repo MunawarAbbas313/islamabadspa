@@ -1,9 +1,9 @@
 /**
- * Fast-Indexing Automation Script for Best Spa Rawalpindi
+ * Fast-Indexing Automation Script for Belvie Spa Islamabad
  * Run using: node scripts/ping-search-engines.mjs
  */
 
-const BASE_URL = "https://bestsparawalpindi.com";
+const BASE_URL = "https://www.islamabadmassagecenter.com";
 const SITEMAP_URL = `${BASE_URL}/sitemap.xml`;
 
 async function pingEngines() {

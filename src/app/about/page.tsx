@@ -46,7 +46,7 @@ export default function AboutPage() {
     "@type": "AboutPage",
     name: "About Belvie Spa and Massage Center",
     description: "About Belvie Spa and Massage Center, luxury wellness and massage center in Maqbool Market, F-7/4, Islamabad.",
-    url: "https://belviespa.com/about",
+    url: "https://www.islamabadmassagecenter.com/about",
   };
 
   return (

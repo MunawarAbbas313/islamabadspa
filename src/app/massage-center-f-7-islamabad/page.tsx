@@ -48,7 +48,7 @@ export default function MassageCenterF7Page() {
     description:
       "Top-rated luxury massage center and spa located in Maqbool Market, F-7/4, Islamabad, Islamabad.",
     telephone: "+923183526306",
-    url: "https://belviespa.com/massage-center-f-7-islamabad",
+    url: "https://www.islamabadmassagecenter.com/massage-center-f-7-islamabad",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Maqbool Market, F-7/4",

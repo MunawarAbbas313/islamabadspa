@@ -39,7 +39,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.85,
-    images: [m.image],
+    // Next.js does not XML-escape image URLs, so escape "&" ourselves
+    images: [m.image.replace(/&/g, "&amp;")],
   }));
 
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => {

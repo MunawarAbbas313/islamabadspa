@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
             <div className="prose prose-stone dark:prose-invert max-w-none space-y-6">
                 <p>Last updated: December 25, 2025</p>
                 <p>
-                    At Belvie Spa and Massage Center, accessible from belviespa.com, one of our main priorities is the privacy of our visitors.
+                    At Belvie Spa and Massage Center, accessible from www.islamabadmassagecenter.com, one of our main priorities is the privacy of our visitors.
                     This Privacy Policy document contains types of information that is collected and recorded by Belvie Spa and Massage Center and how we use it.
                 </p>
 

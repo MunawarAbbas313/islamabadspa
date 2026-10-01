@@ -24,7 +24,7 @@ export default function BlogPage() {
     "@type": "Blog",
     name: "Belvie Spa and Massage Center Wellness Journal",
     description: "Expert articles on massage therapy, stress reduction, and holistic wellness.",
-    url: "https://belviespa.com/blog",
+    url: "https://www.islamabadmassagecenter.com/blog",
   };
 
   return (

@@ -53,7 +53,7 @@ export default function ContactPage() {
     "@type": "ContactPage",
     name: "Contact Belvie Spa and Massage Center",
     description: "Contact and appointment booking page for Belvie Spa and Massage Center in Maqbool Market, F-7/4, Islamabad.",
-    url: "https://belviespa.com/contact",
+    url: "https://www.islamabadmassagecenter.com/contact",
     mainEntity: {
       "@type": "DaySpa",
       name: "Belvie Spa and Massage Center",

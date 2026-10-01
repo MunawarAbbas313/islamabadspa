@@ -1,31 +1,14 @@
 import { NextResponse } from "next/server";
-import { blogPosts } from "@/lib/blog-data";
+import sitemap from "@/app/sitemap";
+import { SITE } from "@/lib/site";
 
 export async function GET() {
-  const host = "belviespa.com";
+  const host = new URL(SITE.url).host;
   const key = "belviespa2026indexnow";
-  const keyLocation = `https://${host}/${key}.txt`;
+  const keyLocation = `${SITE.url}/${key}.txt`;
 
-  const staticUrls = [
-    `https://${host}/`,
-    `https://${host}/massage-center-islamabad`,
-    `https://${host}/spa-f-7-islamabad`,
-    `https://${host}/massage-f-7-islamabad`,
-    `https://${host}/massage-center-f-7-islamabad`,
-    `https://${host}/full-body-massage`,
-    `https://${host}/body-massage`,
-    `https://${host}/spa-services`,
-    `https://${host}/services`,
-    `https://${host}/location`,
-    `https://${host}/why-choose-us`,
-    `https://${host}/contact`,
-    `https://${host}/whatsapp`,
-    `https://${host}/about`,
-    `https://${host}/blog`,
-  ];
-
-  const blogUrls = blogPosts.map((p) => `https://${host}/blog/${p.slug}`);
-  const urlList = [...staticUrls, ...blogUrls];
+  // Submit every URL in the sitemap so new pages are picked up automatically
+  const urlList = sitemap().map((entry) => entry.url);
 
   try {
     const response = await fetch("https://api.indexnow.org/indexnow", {
